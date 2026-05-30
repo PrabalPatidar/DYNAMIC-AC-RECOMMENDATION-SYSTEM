@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { getProductsByTonnage, getAvailableBrands, ACProduct } from '../data/products';
+import { getProductsByTonnage, getAvailableBrands, getAllTonnages, ACProduct } from '../data/products';
 import ACHeroSection from '../components/ac/ACHeroSection';
 import ACTrustBar from '../components/ac/ACTrustBar';
 import ACFilterBar, { SortOption, PriceRange } from '../components/ac/ACFilterBar';
@@ -12,7 +12,7 @@ import ACFooterNav from '../components/ac/ACFooterNav';
 import ACPriceDisclaimer from '../components/ac/ACPriceDisclaimer';
 
 export default function RecommendedACPage() {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const tonParam = searchParams.get('ton');
   const typeParam = searchParams.get('type') || 'inverter';
 
@@ -27,6 +27,11 @@ export default function RecommendedACPage() {
   // Get base products for this tonnage
   const baseProducts = useMemo(() => getProductsByTonnage(tonnage), [tonnage]);
   const availableBrands = useMemo(() => getAvailableBrands(tonnage), [tonnage]);
+  const availableTonnages = useMemo(() => getAllTonnages(), []);
+
+  const handleTonnageChange = (newTonnage: number) => {
+    setSearchParams({ ton: newTonnage.toString(), type: typeParam });
+  };
 
   // Apply filters
   const filteredProducts = useMemo(() => {
@@ -132,6 +137,8 @@ export default function RecommendedACPage() {
           availableBrands={availableBrands}
           compareCount={compareIds.size}
           tonnage={tonnage}
+          onTonnageChange={handleTonnageChange}
+          availableTonnages={availableTonnages}
         />
 
         {/* Product list */}

@@ -13,6 +13,8 @@ interface ACFilterBarProps {
   availableBrands: string[];
   compareCount: number;
   tonnage: number;
+  onTonnageChange: (tonnage: number) => void;
+  availableTonnages: number[];
 }
 
 function Dropdown({
@@ -80,6 +82,8 @@ export default function ACFilterBar({
   availableBrands,
   compareCount,
   tonnage,
+  onTonnageChange,
+  availableTonnages,
 }: ACFilterBarProps) {
   const sortOptions = [
     { value: 'recommended', label: 'Recommended' },
@@ -101,6 +105,11 @@ export default function ACFilterBar({
     ...availableBrands.map((b) => ({ value: b, label: b })),
   ];
 
+  const tonnageOptions = availableTonnages.map((t) => ({
+    value: t.toString(),
+    label: `${t % 1 === 0 ? t.toFixed(1) : t} Ton`,
+  }));
+
   const sortDisplay = sortOptions.find((o) => o.value === sortBy)?.label || 'Recommended';
   const priceDisplay = priceOptions.find((o) => o.value === priceRange)?.label || 'All Prices';
   const brandDisplay = brand === 'all' ? 'All Brands' : brand;
@@ -110,13 +119,13 @@ export default function ACFilterBar({
       <div className="ac-filter-group">
         <Dropdown label="Sort By" value={sortBy} displayValue={sortDisplay} options={sortOptions} onChange={(v) => onSortChange(v as SortOption)} />
         
-        {/* Capacity display (read-only for current implementation) */}
-        <div className="ac-filter-dropdown">
-          <label className="ac-filter-label">Capacity</label>
-          <div className="ac-filter-btn ac-filter-readonly">
-            <span>{tonnage} Ton</span>
-          </div>
-        </div>
+        <Dropdown 
+          label="Capacity" 
+          value={tonnage.toString()} 
+          displayValue={`${tonnage % 1 === 0 ? tonnage.toFixed(1) : tonnage} Ton`} 
+          options={tonnageOptions} 
+          onChange={(v) => onTonnageChange(parseFloat(v))} 
+        />
 
         <Dropdown label="Price Range" value={priceRange} displayValue={priceDisplay} options={priceOptions} onChange={(v) => onPriceRangeChange(v as PriceRange)} />
         <Dropdown label="Brands" value={brand} displayValue={brandDisplay} options={brandOptions} onChange={onBrandChange} />
