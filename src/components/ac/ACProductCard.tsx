@@ -51,10 +51,19 @@ function StarBadge({ stars }: { stars: number }) {
   );
 }
 
+const BRAND_LOGOS: Record<string, string> = {
+  'LG': 'https://cdn.worldvectorlogo.com/logos/lg-electronics.svg',
+  'Daikin': 'https://cdn.worldvectorlogo.com/logos/daikin.svg',
+  'Panasonic': 'https://cdn.worldvectorlogo.com/logos/panasonic.svg',
+  'Samsung': 'https://cdn.worldvectorlogo.com/logos/samsung.svg',
+  'Voltas': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Voltas_logo.svg/320px-Voltas_logo.svg.png'
+};
+
 export default function ACProductCard({ product, index, isCompared, onToggleCompare }: ACProductCardProps) {
   const discount = getDiscountPercent(product.price, product.mrp);
   const badgeStyle = product.badge ? BADGE_COLORS[product.badge] : null;
   const [imgError, setImgError] = useState(false);
+  const [brandLogoError, setBrandLogoError] = useState(false);
 
   // Fallback SVG for missing product images
   const FallbackImage = () => (
@@ -97,7 +106,19 @@ export default function ACProductCard({ product, index, isCompared, onToggleComp
               onError={() => setImgError(true)}
             />
           )}
-          <div className="ac-card-brand">{product.brand}</div>
+          <div className="ac-card-brand">
+            {brandLogoError || !BRAND_LOGOS[product.brand] ? (
+              product.brand
+            ) : (
+              <img 
+                src={BRAND_LOGOS[product.brand]} 
+                alt={product.brand} 
+                className="ac-brand-logo-img"
+                style={{ height: '24px', objectFit: 'contain', margin: '0 auto' }}
+                onError={() => setBrandLogoError(true)}
+              />
+            )}
+          </div>
         </div>
 
         {/* CENTER — Details */}

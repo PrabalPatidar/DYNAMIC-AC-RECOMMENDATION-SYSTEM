@@ -58,7 +58,7 @@ export const products: ACProduct[] = [
     price: 32990,
     mrp: 46990,
     affiliate_link: 'https://www.amazon.in/dp/B0EXAMPLE1?tag=ahmedabadac-21',
-    image: '/images/ac/lg-1ton.webp',
+    image: '/images/ac/lg-1ton.png',
     rating: 4.5,
     review_count: 1256,
     features: [
@@ -85,7 +85,7 @@ export const products: ACProduct[] = [
     price: 34990,
     mrp: 50500,
     affiliate_link: 'https://www.amazon.in/dp/B0EXAMPLE2?tag=ahmedabadac-21',
-    image: '/images/ac/daikin-1ton.webp',
+    image: '/images/ac/daikin-1ton.png',
     rating: 4.3,
     review_count: 982,
     features: [
@@ -112,7 +112,7 @@ export const products: ACProduct[] = [
     price: 38990,
     mrp: 58700,
     affiliate_link: 'https://www.amazon.in/dp/B0EXAMPLE3?tag=ahmedabadac-21',
-    image: '/images/ac/panasonic-1ton.webp',
+    image: '/images/ac/panasonic-1ton.png',
     rating: 4.6,
     review_count: 753,
     features: [
@@ -139,7 +139,7 @@ export const products: ACProduct[] = [
     price: 31490,
     mrp: 44900,
     affiliate_link: 'https://www.amazon.in/dp/B0EXAMPLE4?tag=ahmedabadac-21',
-    image: '/images/ac/samsung-1ton.webp',
+    image: '/images/ac/samsung-1ton.png',
     rating: 4.2,
     review_count: 641,
     features: [
@@ -165,7 +165,7 @@ export const products: ACProduct[] = [
     price: 29990,
     mrp: 42500,
     affiliate_link: 'https://www.amazon.in/dp/B0EXAMPLE5?tag=ahmedabadac-21',
-    image: '/images/ac/voltas-1ton.webp',
+    image: '/images/ac/voltas-1ton.png',
     rating: 4.1,
     review_count: 1102,
     features: [
@@ -193,7 +193,7 @@ export const products: ACProduct[] = [
     price: 44990,
     mrp: 52500,
     affiliate_link: 'https://www.amazon.in/dp/B0EXAMPLE6?tag=ahmedabadac-21',
-    image: '/images/ac/daikin-15ton.webp',
+    image: '/images/ac/daikin-15ton.png',
     rating: 4.6,
     review_count: 1248,
     features: [
@@ -220,7 +220,7 @@ export const products: ACProduct[] = [
     price: 41990,
     mrp: 48990,
     affiliate_link: 'https://www.amazon.in/dp/B0EXAMPLE7?tag=ahmedabadac-21',
-    image: '/images/ac/lg-15ton.webp',
+    image: '/images/ac/lg-15ton.png',
     rating: 4.5,
     review_count: 987,
     features: [
@@ -247,7 +247,7 @@ export const products: ACProduct[] = [
     price: 39990,
     mrp: 46900,
     affiliate_link: 'https://www.amazon.in/dp/B0EXAMPLE8?tag=ahmedabadac-21',
-    image: '/images/ac/panasonic-15ton.webp',
+    image: '/images/ac/panasonic-15ton.png',
     rating: 4.4,
     review_count: 756,
     features: [
@@ -274,7 +274,7 @@ export const products: ACProduct[] = [
     price: 43490,
     mrp: 56900,
     affiliate_link: 'https://www.amazon.in/dp/B0EXAMPLE9?tag=ahmedabadac-21',
-    image: '/images/ac/samsung-15ton.webp',
+    image: '/images/ac/samsung-15ton.png',
     rating: 4.4,
     review_count: 834,
     features: [
@@ -300,7 +300,7 @@ export const products: ACProduct[] = [
     price: 36990,
     mrp: 47500,
     affiliate_link: 'https://www.amazon.in/dp/B0EXAMPLE10?tag=ahmedabadac-21',
-    image: '/images/ac/voltas-15ton.webp',
+    image: '/images/ac/voltas-15ton.png',
     rating: 4.2,
     review_count: 1341,
     features: [
@@ -328,7 +328,7 @@ export const products: ACProduct[] = [
     price: 52990,
     mrp: 68900,
     affiliate_link: 'https://www.amazon.in/dp/B0EXAMPLE11?tag=ahmedabadac-21',
-    image: '/images/ac/lg-2ton.webp',
+    image: '/images/ac/lg-2ton.png',
     rating: 4.5,
     review_count: 678,
     features: [
@@ -355,7 +355,7 @@ export const products: ACProduct[] = [
     price: 54990,
     mrp: 67500,
     affiliate_link: 'https://www.amazon.in/dp/B0EXAMPLE12?tag=ahmedabadac-21',
-    image: '/images/ac/daikin-2ton.webp',
+    image: '/images/ac/daikin-2ton.png',
     rating: 4.4,
     review_count: 543,
     features: [
@@ -382,7 +382,7 @@ export const products: ACProduct[] = [
     price: 49990,
     mrp: 62900,
     affiliate_link: 'https://www.amazon.in/dp/B0EXAMPLE13?tag=ahmedabadac-21',
-    image: '/images/ac/samsung-2ton.webp',
+    image: '/images/ac/samsung-2ton.png',
     rating: 4.3,
     review_count: 489,
     features: [
@@ -409,7 +409,7 @@ export const products: ACProduct[] = [
     price: 58990,
     mrp: 74900,
     affiliate_link: 'https://www.amazon.in/dp/B0EXAMPLE14?tag=ahmedabadac-21',
-    image: '/images/ac/panasonic-2ton.webp',
+    image: '/images/ac/panasonic-2ton.png',
     rating: 4.6,
     review_count: 412,
     features: [
@@ -436,7 +436,7 @@ export const products: ACProduct[] = [
     price: 46990,
     mrp: 58500,
     affiliate_link: 'https://www.amazon.in/dp/B0EXAMPLE15?tag=ahmedabadac-21',
-    image: '/images/ac/voltas-2ton.webp',
+    image: '/images/ac/voltas-2ton.png',
     rating: 4.1,
     review_count: 876,
     features: [
