@@ -187,7 +187,7 @@
 }
 
 .ac-card-img {
-  @apply w-full max-w-[140px] h-auto object-contain;
+  @apply w-full max-w-[180px] h-auto object-contain drop-shadow-md transition-transform duration-300 hover:scale-105;
 }
 
 .ac-card-img-fallback {
@@ -463,27 +463,47 @@
   }
 
   .ac-card-layout {
-    @apply flex-col p-4 gap-3;
+    @apply flex-col p-4 gap-4;
   }
 
   .ac-card-left {
-    @apply w-full flex-row gap-4 items-center;
+    @apply w-full flex-col items-center justify-center gap-2 pb-2 border-b border-slate-100;
   }
 
   .ac-card-img {
-    @apply max-w-[100px];
+    @apply w-full max-w-[220px] h-auto object-contain drop-shadow-md;
+  }
+  
+  .ac-card-center {
+    @apply mt-0;
+  }
+  
+  .ac-card-title {
+    @apply text-base leading-snug mt-0;
+  }
+  
+  .ac-feature-item {
+    @apply text-xs;
   }
 
   .ac-card-right {
-    @apply w-full items-stretch border-l-0;
+    @apply w-full items-stretch border-l-0 border-t border-slate-100 pt-3 mt-0;
   }
-
+  
+  .ac-price {
+    @apply text-xl;
+  }
+  
+  .ac-mrp {
+    @apply text-xs;
+  }
+  
   .ac-cta-primary {
-    @apply w-full text-center;
+    @apply w-full text-center py-3 mt-2;
   }
 
   .ac-compare-toggle {
-    @apply w-full;
+    @apply w-full py-2.5 mt-2;
   }
 
   .ac-expert-cta-inner {
